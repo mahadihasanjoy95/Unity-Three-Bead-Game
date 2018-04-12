@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour {
 
@@ -71,7 +72,7 @@ public class Login : MonoBehaviour {
            username.GetComponent<InputField>().text = "";
            password.GetComponent<InputField>().text = "";
            print("Login Successfull");
-            Application.LoadLevel("Main");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
     }

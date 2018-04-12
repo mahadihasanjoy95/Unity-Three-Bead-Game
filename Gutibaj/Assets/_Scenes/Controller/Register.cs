@@ -15,7 +15,7 @@ public class Register : MonoBehaviour {
     private string Username;
     private string Email;
     private string Password;
-    private string ConfPassword;
+    private string ConfPassword;    
     private string form;
     private bool EmailValid = false;
     private string[] Characters={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
@@ -159,6 +159,8 @@ public class Register : MonoBehaviour {
         Email = email.GetComponent<InputField>().text;
         Password = password.GetComponent<InputField>().text;
         ConfPassword = confPassword.GetComponent<InputField>().text;
+        
+        
 
 		
 	}

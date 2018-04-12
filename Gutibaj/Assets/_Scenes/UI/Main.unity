@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 60791116}
   - component: {fileID: 60791121}
   - component: {fileID: 60791120}
+  - component: {fileID: 60791122}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -281,16 +282,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn1: {fileID: 696975022}
   btn2: {fileID: 2010300770}
-  btn3: {fileID: 0}
-  btn4: {fileID: 0}
-  btn5: {fileID: 0}
-  btn6: {fileID: 0}
-  btn7: {fileID: 0}
-  btn8: {fileID: 0}
-  btn9: {fileID: 0}
+  btn3: {fileID: 308026310}
+  btn4: {fileID: 923928652}
+  btn5: {fileID: 158069635}
+  btn6: {fileID: 1366796125}
+  btn7: {fileID: 1636031745}
+  btn8: {fileID: 555085237}
+  btn9: {fileID: 1236484148}
+  myMusic: {fileID: 60791122}
   greenpawn: {fileID: 21300000, guid: 025fd2060932654409e6e50f463d9dac, type: 3}
   redpawn: {fileID: 21300000, guid: d084f91005d212d49886141eaf9d08a5, type: 3}
-  tempimage: {fileID: 0}
+  tempimage: {fileID: 21300000, guid: 5f774644db9ee0141b36f4791ca34cc5, type: 3}
 --- !u!114 &60791121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +334,86 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!82 &60791122
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60791115}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9c81708937d7b400f94950a59f4ca6bb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &158069633
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +489,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 158069636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60791120}
+        m_MethodName: changeButton5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &158069636
@@ -565,7 +658,6 @@ GameObject:
   - component: {fileID: 308026312}
   - component: {fileID: 308026311}
   - component: {fileID: 308026310}
-  - component: {fileID: 308026313}
   m_Layer: 5
   m_Name: btn3
   m_TagString: Untagged
@@ -676,29 +768,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308026308}
---- !u!114 &308026313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 308026308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57aa676ad77e301459afcce6427705fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btn1: {fileID: 0}
-  btn2: {fileID: 0}
-  btn3: {fileID: 0}
-  btn4: {fileID: 0}
-  btn5: {fileID: 0}
-  btn6: {fileID: 0}
-  btn7: {fileID: 0}
-  btn8: {fileID: 0}
-  btn9: {fileID: 0}
-  greenpawn: {fileID: 0}
-  redpawn: {fileID: 0}
-  tempimage: {fileID: 0}
 --- !u!1 &370099629
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +978,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 555085238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60791120}
+        m_MethodName: changeButton8
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &555085238
@@ -958,7 +1038,6 @@ GameObject:
   - component: {fileID: 696975023}
   - component: {fileID: 696975022}
   - component: {fileID: 696975025}
-  - component: {fileID: 696975026}
   m_Layer: 5
   m_Name: btn1
   m_TagString: Untagged
@@ -1085,29 +1164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c542fbe3a31f6784f9d99967a9f5dd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &696975026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 696975020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57aa676ad77e301459afcce6427705fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btn1: {fileID: 696975022}
-  btn2: {fileID: 2010300770}
-  btn3: {fileID: 308026310}
-  btn4: {fileID: 923928652}
-  btn5: {fileID: 158069635}
-  btn6: {fileID: 1366796125}
-  btn7: {fileID: 1636031745}
-  btn8: {fileID: 555085237}
-  btn9: {fileID: 1236484148}
-  greenpawn: {fileID: 21300000, guid: 025fd2060932654409e6e50f463d9dac, type: 3}
-  redpawn: {fileID: 21300000, guid: d084f91005d212d49886141eaf9d08a5, type: 3}
-  tempimage: {fileID: 21300000, guid: 5f774644db9ee0141b36f4791ca34cc5, type: 3}
 --- !u!1 &778465246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,9 +1195,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.95461076}
-  m_AnchoredPosition: {x: -256, y: -86.5}
-  m_SizeDelta: {x: 785.19995, y: 1206.5}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000022888002, y: -2.1100277e-10}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &778465248
 MonoBehaviour:
@@ -1155,15 +1211,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03676468, g: 0.03730534, b: 0.03730534, a: 0.997}
+  m_Color: {r: 0.6665791, g: 0.6591695, b: 0.7058823, a: 0.997}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 3306f8d207a0cda4f988f3ec3efb6256, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1318,7 +1374,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 923928653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60791120}
+        m_MethodName: changeButton4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &923928653
@@ -1568,7 +1635,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236484149}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60791120}
+        m_MethodName: changeButton9
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1236484149
@@ -1678,7 +1756,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1366796126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60791120}
+        m_MethodName: changeButton6
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1366796126
@@ -1968,7 +2057,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1636031746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60791120}
+        m_MethodName: changeButton7
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1636031746
@@ -2212,6 +2312,8 @@ GameObject:
   - component: {fileID: 1913733972}
   - component: {fileID: 1913733974}
   - component: {fileID: 1913733973}
+  - component: {fileID: 1913733976}
+  - component: {fileID: 1913733975}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -2270,6 +2372,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1913733971}
+--- !u!114 &1913733975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913733971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57aa676ad77e301459afcce6427705fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn1: {fileID: 696975022}
+  btn2: {fileID: 2010300770}
+  btn3: {fileID: 308026310}
+  btn4: {fileID: 923928652}
+  btn5: {fileID: 158069635}
+  btn6: {fileID: 1366796125}
+  btn7: {fileID: 1636031745}
+  btn8: {fileID: 555085237}
+  btn9: {fileID: 1236484148}
+  myMusic: {fileID: 0}
+  greenpawn: {fileID: 21300000, guid: 025fd2060932654409e6e50f463d9dac, type: 3}
+  redpawn: {fileID: 21300000, guid: d084f91005d212d49886141eaf9d08a5, type: 3}
+  tempimage: {fileID: 21300000, guid: 5f774644db9ee0141b36f4791ca34cc5, type: 3}
+--- !u!114 &1913733976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913733971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1913733973}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1933127595
 Prefab:
   m_ObjectHideFlags: 0
@@ -2381,7 +2559,6 @@ GameObject:
   - component: {fileID: 2010300772}
   - component: {fileID: 2010300771}
   - component: {fileID: 2010300770}
-  - component: {fileID: 2010300773}
   m_Layer: 5
   m_Name: btn2
   m_TagString: Untagged
@@ -2492,26 +2669,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010300768}
---- !u!114 &2010300773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010300768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57aa676ad77e301459afcce6427705fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btn1: {fileID: 696975022}
-  btn2: {fileID: 2010300770}
-  btn3: {fileID: 308026310}
-  btn4: {fileID: 923928652}
-  btn5: {fileID: 158069635}
-  btn6: {fileID: 1366796125}
-  btn7: {fileID: 1636031745}
-  btn8: {fileID: 555085237}
-  btn9: {fileID: 1236484148}
-  greenpawn: {fileID: 21300000, guid: 025fd2060932654409e6e50f463d9dac, type: 3}
-  redpawn: {fileID: 21300000, guid: d084f91005d212d49886141eaf9d08a5, type: 3}
-  tempimage: {fileID: 21300000, guid: 5f774644db9ee0141b36f4791ca34cc5, type: 3}
